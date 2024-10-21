@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Lista de Pedidos</h1>
+    <div *ngFor="let pedido of pedidos">
+      <p>
+        Pedido #{{ pedido.id }} - Cliente: {{ pedido.cliente }} - Total: {{ pedido.total | currency }} - Status: {{ pedido.status }}
+        <button class="btn btn-danger" (click)="removerPedido(pedido.id)">Remover</button>
+      </p>
+    </div>
+  </div>
+  
